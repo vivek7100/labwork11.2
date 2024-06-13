@@ -1,0 +1,95 @@
+﻿Q.1 Write a Program to find the sum of all 1D Array elements by passing an array as an argument using UDF.
+For example,
+Input:
+Enter array size: 5
+Enter array elements:
+a[0] = 6
+a[1] = 4
+a[2] = 1
+a[3] = 5
+a[4] = 2
+
+
+Output:
+The sum of an Array: 18
+Ans: #include <stdio.h>
+
+
+void findSum(int arr[], int k) ;
+
+
+int main() {
+    int k;
+    printf("Enter array size: ");
+    scanf("%d", &k);
+
+
+    int arr[k];
+    printf("Enter array elements:\n");
+    for (int i = 0; i < k; i++) {
+        printf("a[%d] = ", i);
+        scanf("%d", &arr[i]);
+    }
+
+
+    findSum(arr, k);
+
+
+    return 0;
+}
+void findSum(int arr[], int k) {
+    int sum = 0;
+    for (int i = 0; i < k; i++) {
+        sum =sum+ arr[i];
+    }
+    printf("The sum of an Array: %d\n", sum);
+}
+O\p: /tmp/zUxtvw9CYh.o
+Enter array size: 5
+Enter array elements:
+a[0] = 6
+a[1] = 4
+a[2] = 1
+a[3] = 5
+a[4] = 2
+The sum of an Array: 18
+
+
+
+
+=== Code Execution Successful ===
+Q.2 Write a Program to find the length of the String by passing a string as an argument using UDF.
+For example,
+Input:
+Enter any string: development
+
+
+Output:
+Length is: 11
+Ans: #include <stdio.h>
+#include <string.h>
+
+
+int findLength(char k[]) {
+    return strlen(k);
+}
+
+
+int main() {
+    char k[100];
+    printf("Enter any string: ");
+    scanf("%s", k);
+    int length = findLength(k);
+    printf("Length is: %d\n", length);
+    return 0;
+}
+
+
+O\p: /tmp/PcUBlNT0yF.o
+Enter any string: development
+Length is: 11
+
+
+
+
+=== Code Execution Successful ===
